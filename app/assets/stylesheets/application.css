@@ -1,5 +1,7 @@
 .container {
   margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
 	text-align: center;
   border: 1px solid black;
 }
@@ -42,7 +44,7 @@
 
 .artist-bio {
   margin: 1%;
-  padding: 3%;
+
   height: 22em;
   display: inline-block;
   border: 1px solid black;
@@ -51,15 +53,19 @@
 
 .artist-followers {
   margin: 1%;
+  height: 30em;
   margin-left: 15%;
   display: inline-block;
   border: 1px solid black;
+  overflow: auto;
 }
 
 .artist-shows {
   margin: 1%;
+  height: 30em;
   display: inline-block;
   border: 1px solid black;
+  overflow: auto;
 }
 
 .row {
