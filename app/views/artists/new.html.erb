@@ -1,0 +1,39 @@
+<div class="container">
+
+  <h3>Register as an artist below</h3>
+
+  <%= form_for @artist, :html => { :class => "form-horizontal" } do |f|%>
+    <div class="form-group">
+      <%= f.label :name, :html => { :class => "col-sm-2 control-label" } %>
+      <%= f.text_field :name, :html => { :class => "form-control" } %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :photo_url %>
+      <%= f.text_field :photo_url %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :bio %>
+      <%= f.text_area :bio %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+
+</div>
