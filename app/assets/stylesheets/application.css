@@ -6,7 +6,8 @@
 
 .artist-photo {
   margin: 1%;
-  margin-left: 10%;
+  height: 22em;
+  margin-left: 7%;
   display: inline-block;
   border: 1px solid black;
   overflow: hidden;
@@ -14,35 +15,38 @@
 
 .artist-name {
   margin: 1%;
-  margin-left: 10%;
+  padding: 0;
   display: inline-block;
   border: 1px solid black;
 }
 
 .artist-email {
   margin: 1%;
-  margin-left: 10%;
   display: inline-block;
   border: 1px solid black;
 }
 
 .artist-location {
   margin: 1%;
-  margin-left: 10%;
   display: inline-block;
   border: 1px solid black;
 }
 
 .artist-details {
   margin: 1%;
+  padding: 3%;
+  height: 22em;
   display: inline-block;
   border: 1px solid black;
 }
 
 .artist-bio {
   margin: 1%;
+  padding: 3%;
+  height: 22em;
   display: inline-block;
   border: 1px solid black;
+  overflow: auto;
 }
 
 .artist-followers {

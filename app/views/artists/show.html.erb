@@ -10,8 +10,12 @@
       <h4><%= @artist.location %></h4><br>
     </div>
 
-    <div class="artist-bio col-md-3">
-      <p><%= @artist.bio %></p>
+    <div class="artist-bio col-md-4">
+      <p>
+        <% 30.times do %>
+        <%= @artist.bio %>
+        <% end %>
+      </p>
     </div>
   </div>
 
