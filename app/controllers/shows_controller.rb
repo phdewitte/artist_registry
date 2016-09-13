@@ -20,7 +20,7 @@ class ShowsController < ApplicationController
 
   private
     def find_headliner
-      @artist = Artist.find_by(params[:artist_id])
+      @artist = @current_artist
     end
 
     def show_params

@@ -30,6 +30,9 @@
 
     <div class="artist-shows col-md-4">
       <h4><%= "#{@artist.name}'s Upcoming Shows" %></h4>
+      <% if @current_artist %>
+        <%= link_to("Add a new show!", new_artist_show_path(@current_artist)) %>
+      <% end %>
       <% 5.times do %>
       <p class="artist-follower"> <%= "Artist show" %> </p>
       <% end %>
