@@ -11,7 +11,7 @@ class ArtistsController < ApplicationController
 		@artist = Artist.new(artist_params)
 		if @artist.save
 			session[:user_id] = @artist.id
-			redirect_to '/artists/:id'
+			redirect_to artist_path(@artist)
 		else
 			@errors = @artist.errors.full_messages
 			render :new
@@ -30,9 +30,8 @@ class ArtistsController < ApplicationController
 		else
 			@errors = @artist.errors.full_messages
 			render :edit_artist_path
+		end
 	end
-
-
 
 	private
 		def artist_params
