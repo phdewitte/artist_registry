@@ -5,7 +5,7 @@ class FansController < ApplicationController
   end
 
   def new
-    @fan = Fan.new(fan_params)
+    @fan = Fan.new
   end
 
   def create
@@ -32,6 +32,7 @@ class FansController < ApplicationController
 		else
 			@errors = @fan.errors.full_messages
 			render :edit_artist_path
+    end
   end
 
   private
