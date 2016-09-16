@@ -11,7 +11,8 @@ class FansController < ApplicationController
   def create
     @fan = Fan.new(fan_params)
     if @fan.save
-      session[:fan_id] = @fan.id
+      session[:user_id] = @fan.id
+      session[:user_type] = "fan"
       redirect_to fan_path(@fan)
     else
       @errors = @fan.errors.full_messages
