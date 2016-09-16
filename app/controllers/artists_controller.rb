@@ -10,7 +10,8 @@ class ArtistsController < ApplicationController
 	def create
 		@artist = Artist.new(artist_params)
 		if @artist.save
-			session[:artist_id] = @artist.id
+			session[:user_id] = @artist.id
+			session[:user_type] = "artist"
 			redirect_to artist_path(@artist)
 		else
 			@errors = @artist.errors.full_messages

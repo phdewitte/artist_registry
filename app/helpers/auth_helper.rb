@@ -7,13 +7,15 @@ module AuthHelper
     @current_fan ||= Fan.find_by(id: session[:fan_id])
   end
 
-  # need to agree on login rest routes for following
+  def artist_logged_in?
+    !current_artist.nil?
+  end
 
-  # def logged_in?
-  #   !current_artist.nil? || !current_fan.nil?
-  # end
+  def fan_logged_in?
+    !current_fan.nil?
+  end
 
   def authorize!
-    # redirect_to new_session_path unless logged_in?
+    redirect_to new_session_path unless logged_in?
   end
 end
