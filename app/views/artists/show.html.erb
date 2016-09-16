@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="artist-photo col-md-3">
+      <%= image_tag(@artist.photo_url, :html => { :class => "img-responsive"})  %>
+    </div>
+
+    <div class="artist-details col-md-3">
+      <h2><%= @artist.name %></h2><br>
+      <h3><%= @artist.email %></h3><br>
+      <h4><%= @artist.location %></h4><br>
+    </div>
+
+    <div class="artist-bio col-md-4">
+      <h4>Artist Biography</h4>
+      <p>
+        <% 30.times do %>
+        <%= @artist.bio %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+
+  <div class="row col-md-12">
+    <div class="artist-followers col-md-4">
+      <h4><%= "#{@artist.name}'s Followers" %></h4>
+      <% 10.times do %>
+      <p class="artist-follower"> <%= "Artist follower" %> </p>
+      <% end %>
+    </div>
+
+    <div class="artist-shows col-md-4">
+      <h4><%= "#{@artist.name}'s Upcoming Shows" %></h4>
+      <% if @current_artist %>
+        <%= link_to("Add a new show!", new_artist_show_path(@current_artist)) %>
+      <% end %>
+      <% 5.times do %>
+      <p class="artist-follower"> <%= "Artist show" %> </p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Login Here</h2>
+  <br>
+  <% if @error %>
+      <h4><%= @error %></h4>
+  <% end %>
+  <br>
+  <%= render '/sessions/form' %>
+</div>

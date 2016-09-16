@@ -1,0 +1,49 @@
+<div class="container">
+
+  <div>
+    <h3 class="text-center">Register as a fan below:</h3>
+  </div>
+
+  <%= form_for(@fan, html: {class: 'form-horizontal'}) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit %>
+  </div>
+
+  <% end %>
+</div>

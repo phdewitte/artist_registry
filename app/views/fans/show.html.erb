@@ -1,0 +1,42 @@
+<div class="container-fluid">
+
+  <div class="row col-md-12">
+    <div class="container col-md-6">
+      <%= image_tag(@fan.photo_url, :html => { :class => "img-responsive"})  %>
+    </div>
+
+    <div class="container text-left col-md-4">
+      <h2><%= @fan.first_name %> <%= @fan.last_name %></h2>
+      <h2><%= @fan.location %></h2>
+    </div>
+
+    <div class="container col-md-2">
+      <h2>Bio:</h2>
+      <p><%= @fan.bio %></p>
+    </div>
+  </div>
+
+  <div class="row col-md-12">
+    <div class="container col-md-4">
+      <h2 class="text-center">Bands you're following:</h2>
+      <% 10.times do %>
+      <p class="text-center"><%= "Artist you follow" %> </p>
+      <% end %>
+    </div>
+
+    <div class="container col-md-4">
+      <h2 class="text-center">Bands you may be interested in:</h2>
+      <% 10.times do %>
+      <p class="text-center"><%= "Interesting Artist" %> </p>
+      <% end %>
+    </div>
+
+    <div class="container col-md-4">
+      <h2 class="text-center">Upcoming Shows:</h2>
+      <% 10.times do %>
+      <p class="text-center"><%= "Upcoming Show" %> </p>
+      <% end %>
+    </div>
+  </div>
+
+</div>
