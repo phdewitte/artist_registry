@@ -1,0 +1,14 @@
+<%= form_tag sessions_path, :html => {:class => "form-horizontal"} do %>
+  <div class="form-group">
+    <%= radio_button_tag(:user_type, "artist") %>
+    <%= label_tag(:artist, "I am an artist") %>
+    <%= radio_button_tag(:user_type, "fan") %>
+    <%= label_tag(:fan, "I am a fan") %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= text_field_tag :email, params[:email], placeholder: "Email" %>
+    <%= password_field_tag :password, params[:password], placeholder: "Password" %>
+  </div>
+  <%= submit_tag "Login" %>
+<% end %>

@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>ArtistRegistry</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+  <header class="header-nav">
+    <h1>Artist Registry</h1>
+    <h3>Connecting bands with their fans</h3>
+    <% if current_artist %>
+      Welcome, <%= link_to current_artist.email, artist_path(current_artist) %>
+      //
+      <%= link_to "Logout", session_path(current_artist), method: :delete %>
+    <% elsif current_fan %>
+      <%= link_to current_fan.email, fan_path(current_fan) %>
+      <%= link_to "Logout", session_path(current_fan), method: :delete %>
+    <% end %>
+  </header>
 
 <%= yield %>
 
