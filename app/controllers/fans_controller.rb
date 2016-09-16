@@ -12,7 +12,7 @@ class FansController < ApplicationController
     @fan = Fan.new(fan_params)
     if @fan.save
       session[:fan_id] = @fan.id
-      redirect to '/fans/:id'
+      redirect_to fan_path(@fan)
     else
       @errors = @fan.errors.full_messages
       render :new
