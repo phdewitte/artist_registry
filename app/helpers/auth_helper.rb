@@ -1,10 +1,10 @@
 module AuthHelper
   def current_artist
-    @current_artist ||= Artist.find_by(id: session[:artist_id])
+    @current_artist ||= Artist.find_by(id: session[:user_id])
   end
 
   def current_fan
-    @current_fan ||= Fan.find_by(id: session[:fan_id])
+    @current_fan ||= Fan.find_by(id: session[:user_id])
   end
 
   def artist_logged_in?
