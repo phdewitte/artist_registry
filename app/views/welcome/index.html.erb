@@ -3,20 +3,17 @@
 		<h1>Artist Registry</h1>
 		<h3>Connecting bands with their fans</h3>
 	</header>
-
-		<div class="login">
-			<p>Log In Here</p>
-			<%= link_to('Artist Login', '/sessions/artist_login') %>
-			// 
-			<%= link_to('Fan Login', '/sessions/fan_login') %>
-		</div>
-
+	<br>
+	<div class="login">
+		<h4>Log In Here</h4>
 		<br>
-
-		<div class="register">
-			<%= link_to('Register As An Artist', '/artists/new') %>
-			//
-			<%= link_to('Register As A Fan', '/fans/new') %>
-		</div>
+		<%= render 'sessions/form' %>
+	</div>
+	<br>
+	<div class="register">
+		<%= link_to('Register As An Artist', '/artists/new') %>
+		//
+		<%= link_to('Register As A Fan', '/fans/new') %>
+	</div>
 
 </div>

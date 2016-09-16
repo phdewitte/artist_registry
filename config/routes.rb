@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/welcome', to: 'welcome#index'
 
+  resources :sessions, only: [:new, :create, :destroy]
+
   resources :artists do
     resources :shows
   end
