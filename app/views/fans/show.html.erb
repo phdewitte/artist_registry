@@ -7,11 +7,11 @@
 
     <div class="text-left col-md-3 artist-name">
       <h2><%= @fan.first_name %> <%= @fan.last_name %></h2>
-      <h2><%= @fan.location %></h2>
+      <h3><%= @fan.location %></h3>
     </div>
 
     <div class="col-md-4 artist-bio">
-      <h2>Bio:</h2>
+      <h3>Bio:</h3>
       <% 30.times do %>
         <span><%= @fan.bio %>. </span>
       <% end %>
@@ -20,21 +20,21 @@
 
   <div class="row col-md-12">
     <div class="col-md-3 fan-followings">
-      <h2 class="text-center">Bands you're following:</h2>
+      <h3 class="text-center">Bands you're following:</h3>
       <% 10.times do %>
       <p class="text-center"><%= "Artist you follow" %> </p>
       <% end %>
     </div>
 
     <div class="col-md-3 fan-followings">
-      <h2 class="text-center">Bands you may be interested in:</h2>
+      <h3 class="text-center">Bands you may be interested in:</h3>
       <% 10.times do %>
       <p class="text-center"><%= "Interesting Artist" %> </p>
       <% end %>
     </div>
 
     <div class="col-md-3 fan-followings">
-      <h2 class="text-center">Upcoming Shows:</h2>
+      <h3 class="text-center">Upcoming Shows:</h3>
       <% 10.times do %>
       <p class="text-center"><%= "Upcoming Show" %> </p>
       <% end %>
