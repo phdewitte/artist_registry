@@ -76,3 +76,12 @@
 .row {
   margin: auto;
 }
+
+.fan-followings {
+  margin: 1%;
+  height: 30em;
+  margin-left: 6.75%;
+  display: inline-block;
+  border: 1px solid black;
+  overflow: auto;
+}
