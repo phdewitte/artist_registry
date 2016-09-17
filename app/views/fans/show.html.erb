@@ -1,16 +1,16 @@
-<div class="container-fluid">
+<div class="container">
 
-  <div class="row col-md-12">
-    <div class="container col-md-3 fan-photo">
-      <%= image_tag(@fan.photo_url, :html => { :class => "img-responsive"}, size: "300x300")  %>
+  <div class="row">
+    <div class="col-md-3 artist-photo">
+      <%= image_tag(@fan.photo_url, :html => { :class => "img-responsive"}, size: "250x250")  %>
     </div>
 
-    <div class="container text-left col-md-4 fan-info">
+    <div class="text-left col-md-3 artist-name">
       <h2><%= @fan.first_name %> <%= @fan.last_name %></h2>
       <h2><%= @fan.location %></h2>
     </div>
 
-    <div class="container col-md-5 fan-bio">
+    <div class="col-md-4 artist-bio">
       <h2>Bio:</h2>
       <% 30.times do %>
         <span><%= @fan.bio %>. </span>
@@ -19,21 +19,21 @@
   </div>
 
   <div class="row col-md-12">
-    <div class="container col-md-4">
+    <div class="col-md-4">
       <h2 class="text-center">Bands you're following:</h2>
       <% 10.times do %>
       <p class="text-center"><%= "Artist you follow" %> </p>
       <% end %>
     </div>
 
-    <div class="container col-md-4">
+    <div class="col-md-4">
       <h2 class="text-center">Bands you may be interested in:</h2>
       <% 10.times do %>
       <p class="text-center"><%= "Interesting Artist" %> </p>
       <% end %>
     </div>
 
-    <div class="container col-md-4">
+    <div class="col-md-4">
       <h2 class="text-center">Upcoming Shows:</h2>
       <% 10.times do %>
       <p class="text-center"><%= "Upcoming Show" %> </p>
